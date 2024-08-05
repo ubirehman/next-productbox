@@ -1,9 +1,15 @@
 import React from "react";
+import BlogUI from "./pageUI";
+import { getAllPosts } from "../api/_controllers/posts";
 
-type Props = {};
+const Blog = async ({}) => {
+  const { posts } = await getAllPosts();
 
-const Blog = (props: Props) => {
-  return <div className="text-white">Blog</div>;
+  return (
+    <div className="flex px-3">
+      <BlogUI blogPosts={posts} />
+    </div>
+  );
 };
 
 export default Blog;

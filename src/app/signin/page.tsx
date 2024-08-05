@@ -13,7 +13,6 @@ const Signin = ({}) => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    console.log(e)
     const credential = {
       email: e.target[0].value,
       password: e.target[1].value,
