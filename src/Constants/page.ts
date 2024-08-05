@@ -77,15 +77,24 @@ Join Us on Our Journey
 
 At Rapid Sales, we believe that the future of sales lies in AI-powered innovation. We invite you to join us on this exciting journey and experience firsthand how our solutions can transform your business. Together, we can achieve new heights of success and drive the sales revolution forward.`,
     },
+    BLOG: {
+      CREATE: {
+        HEADING: "Create new post",
+        SUBMIT: "Submit"
+      },
+    },
   },
+  
 
   POPUP_MESSAGES: {
     USER_LOGEDIN_SUCCESS_MESSAGE: "Logged in successfully",
     USER_LOGEDIN_FAIL_MESSAGE: "User or email incorrect",
+    BLOG_POST_CREATED_SUCCESS: "Blog post created successfully"
   },
 
   API_LINKS: {
     AUTHENTICATE: "/api/authenticate/signin",
     REGISTER: "/api/authenticate/signup",
+    CREATE_POST: "/api/create",
   },
 };
