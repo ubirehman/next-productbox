@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Pricing = (props: Props) => {
+const Pricing = ({}) => {
   return <div className="text-white">Pricing</div>;
 };
 
