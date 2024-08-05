@@ -1,4 +1,3 @@
-// app/posts/[id]/page.tsx
 import { getPostById } from "@/app/api/_controllers/posts";
 import { notFound } from "next/navigation";
 import SinglePostUI from "./pageUI";
