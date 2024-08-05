@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/Header/page";
+import Header from "../components/header/page";
 
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='font-gothic-a1 min-h-[100dvh] bg-gray-950'>
+      <body className='font-gothic-a1 min-h-[100dvh] bg-gray-950 text-white'>
         <Header />
         {children}
       </body>
