@@ -37,8 +37,6 @@ export async function authenticate(credentials: Credentials) {
 }
 
 export async function register(credentials: Credentials) {
-  console.log("=====================================");
-  console.log(credentials);
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_SERVER_URL}${Constants.API_LINKS.REGISTER}`,
@@ -50,10 +48,6 @@ export async function register(credentials: Credentials) {
         body: JSON.stringify(credentials),
       },
     );
-    console.log(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}${Constants.API_LINKS.REGISTER}`,
-    );
-    console.log(response);
 
     if (!response.ok) {
       const errorData = await response.json();
