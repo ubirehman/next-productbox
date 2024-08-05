@@ -36,6 +36,15 @@ export const Constants = {
     SIGN_UP: "Sign Up",
   },
   PAGES: {
+    AUTH: {
+      SIGNIN: "Sign In",
+      TAGLINE: "Please login to your account.",
+      NAME: "Full Name",
+      EMAIL: "Email",
+      PASSWORD: "Password",
+      SIGNUP: "Sign Up",
+      SIGNUP_TAGLINE: "Create your account",
+    },
     HOME: {
       TITLE: "Transform Your Sales Strategy With RapidSales",
       TAGLINE:
@@ -45,5 +54,15 @@ export const Constants = {
         LEARN_MORE: "Learn More",
       },
     },
+  },
+
+  POPUP_MESSAGES: {
+    USER_LOGEDIN_SUCCESS_MESSAGE: "Logged in successfully",
+    USER_LOGEDIN_FAIL_MESSAGE: "User or email incorrect",
+  },
+
+  API_LINKS: {
+    AUTHENTICATE: "/api/authenticate/signin",
+    REGISTER: "/api/authenticate/signup"
   },
 };

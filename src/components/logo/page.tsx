@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { SiRapid } from "react-icons/si";
-import { Constants } from "@/app/Constants/page";
+import { Constants } from "@/Constants/page";
 
 
 const Logo = () => {
@@ -10,7 +10,7 @@ const Logo = () => {
       href={"/"}
       className="flex text-3xl font-gothic-a1 gap-1 font-semibold items-center"
     >
-      <section className="flex">
+      <section className="flex px-3 md:px-0">
         <h1 className="text-gray-400">{Constants.LOGO.firstName}</h1>
         <h1 className="text-gray-200">{Constants.LOGO.lastName}</h1>
       </section>

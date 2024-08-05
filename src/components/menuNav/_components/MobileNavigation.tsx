@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import React from "react";
-import { Constants } from "@/app/Constants/page";
+import { Constants } from "@/Constants/page";
 
 interface MobileNavProps {
   handleExpandPagesWindow: React.MouseEventHandler<HTMLButtonElement>;

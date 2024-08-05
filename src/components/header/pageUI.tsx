@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../Logo/page";
-import MenuNav from "../MenuNav/page";
-import Auth from "../Auth/page";
+import Logo from "../logo/page";
+import MenuNav from "../menuNav/page";
+import Auth from "../auth/page";
 
 
 const HeaderUI = ({}) => {
