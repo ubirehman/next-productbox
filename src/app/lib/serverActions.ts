@@ -10,6 +10,4 @@ export async function createServerPost(formData: FormData) {
     title,
     content,
   });
-
-  console.log(post);
 }
