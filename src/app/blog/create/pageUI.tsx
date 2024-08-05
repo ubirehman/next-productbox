@@ -1,13 +1,13 @@
+"use client";
+
 import { Constants } from "@/Constants/page";
 import React from "react";
 
+type CreatePostFunction = (formData: FormData) => Promise<void>;
 interface createBlogPostUIProps {
-  handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  createPost: CreatePostFunction;
 }
-
-const CreateBlogPostUI: React.FC<createBlogPostUIProps> = ({
-  handleSubmit,
-}) => {
+const CreateBlogPostUI: React.FC<createBlogPostUIProps> = ({ createPost }) => {
   return (
     <div className="flex h-full w-screen flex-col gap-3 px-3">
       <h1 className="text-2xl font-semibold">
@@ -15,11 +15,17 @@ const CreateBlogPostUI: React.FC<createBlogPostUIProps> = ({
       </h1>
       <form
         className="flex h-full w-full rounded-lg border-2 px-3 py-2"
-        onSubmit={handleSubmit}
+        action={createPost}
       >
         <div className="flex h-full w-full flex-col gap-3 text-black">
-          <input type="text" placeholder="title" className="h-10 px-2" />
+          <input
+            name="title"
+            type="text"
+            placeholder="title"
+            className="h-10 px-2"
+          />
           <textarea
+            name="content"
             placeholder="content"
             className="h-36 items-start px-2 text-start"
           />
@@ -27,8 +33,10 @@ const CreateBlogPostUI: React.FC<createBlogPostUIProps> = ({
           <button
             type="submit"
             value="Submit"
-            className="h-20 w-60 bg-blue-600 text-white text-lg justify-end rounded-lg"
-          >{Constants.PAGES.BLOG.CREATE.SUBMIT}</button>
+            className="h-20 w-60 justify-end rounded-lg bg-blue-600 text-lg text-white"
+          >
+            {Constants.PAGES.BLOG.CREATE.SUBMIT}
+          </button>
         </div>
       </form>
     </div>

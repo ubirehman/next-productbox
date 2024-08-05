@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
-import { redirect } from 'next/navigation';
+import { PrismaClient } from "@prisma/client";
+import { redirect } from "next/navigation";
 
 interface createPostProps {
   title: string;
@@ -18,13 +18,8 @@ export const createPost = async ({ title, content }: createPostProps) => {
         authorId: 1,
       },
     });
-    
-    return {
-      success: true,
-      message: 'Post created successfully',
-      post,
-    };
 
+    redirect("/dashboard");
   } catch (error) {
     console.error(error);
     throw error;
@@ -38,14 +33,13 @@ export const getAllPosts = async () => {
 
   try {
     const posts = await prisma.post.findMany();
-    if(posts.length <= 0)
-    {
-      redirect('/blog/create')
+    if (posts.length <= 0) {
+      redirect("/blog/create");
     }
 
     return {
       success: true,
-      message: 'All posts fetched successfully',
+      message: "All posts fetched successfully",
       posts,
     };
   } catch (error) {
@@ -68,7 +62,7 @@ export const getPostById = async (id: string) => {
 
     return {
       success: true,
-      message: 'Posts fetched successfully',
+      message: "Posts fetched successfully",
       post,
     };
   } catch (error) {
